@@ -7,14 +7,12 @@ import unittest
 class TestFolderPathHandler(unittest.TestCase):
     @unittest.skip("Pass")
     def test_show_sheet_name(self):
-        # Load xls file
         workbook = xlrd.open_workbook('test.xls')
         for sheet_name in workbook.sheet_names():
             print(sheet_name)
 
-    # @unittest.skip("Pass")
+    @unittest.skip("Pass")
     def test_read_cell_color(self):
-        # Load xls file
         workbook = xlrd.open_workbook("test.xls", formatting_info=True)
         sheet = workbook.sheet_by_index(0)  # read first sheet
         print(workbook.sheet_names())
